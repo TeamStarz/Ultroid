@@ -32,7 +32,7 @@ async def _(event):
         fuk = event.builder.article(
             title="Search Something",
             thumb=wb(ytt, 0, "image/jpeg", []),
-            text="**YᴏᴜTᴜʙᴇ Sᴇᴀʀᴄʜ**\n\nYou didn't search anything",
+            text="**YᴏᴜTᴜʙᴇ Sᴇᴀʀᴄʜ**\n\nYou Didn't Search Anything",
             buttons=Button.switch_inline(
                 "Sᴇᴀʀᴄʜ Aɢᴀɪɴ",
                 query="yt ",
@@ -99,7 +99,7 @@ async def _(e):
     )
     _text = "`Select Your Format.`"
     if not _buttons:
-        _text = "`Error domwloading from YouTube.\nTry Restarting your bot.`"
+        _text = "`Error Donwloading From YouTube.\nTry Restarting Your Bot.`"
     await e.edit(_text, buttons=_buttons)
 
 
