@@ -22,7 +22,7 @@ Owner_info_msg = f"""
 
 **Message Forwards** - {udB.get("PMBOT")}
 
-__Ultroid {ultroid_version}, powered by @TeamUltroid__
+__Ultroid {ultroid_version}, Development by @Reeeeeezy__
 """
 
 _settings = [
@@ -69,7 +69,7 @@ async def ultroid(event):
     if event.is_group:
         if str(event.sender_id) in owner_and_sudos():
             return await event.reply(
-                "`I dont work in groups`",
+                "`I Dont Work In Groups`",
                 buttons=[
                     Button.url(
                         "Sᴛᴀʀᴛ", url=f"https://t.me/{asst.me.username}?start=set"
@@ -139,7 +139,7 @@ Total Users - {}""".format(
 @owner
 async def bdcast(event):
     ok = get_all_users()
-    await event.edit(f"Broadcast to {len(ok)} users.")
+    await event.edit(f"Broadcast To {len(ok)} users.")
     async with event.client.conversation(OWNER_ID) as conv:
         await conv.send_message(
             "Enter Your Broadcast Message.\nUse /cancel To Stop The Broadcast.",
