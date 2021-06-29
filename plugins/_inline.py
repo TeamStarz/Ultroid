@@ -452,7 +452,7 @@ async def on_plug_in_callback_query_handler(event):
     except BaseException:
         pass
     if help_string == "":
-        reply_pop_up_alert = f"{plugin_name} has no detailed help..."
+        reply_pop_up_alert = f"{plugin_name} Has No Detailed Help..."
     else:
         reply_pop_up_alert = help_string
     reply_pop_up_alert += "\n© @Rezy_IsBack"
@@ -478,7 +478,7 @@ async def on_plug_in_callback_query_handler(event):
             reply_pop_up_alert = notmine
             await event.answer(reply_pop_up_alert, cache_time=0)
     except BaseException:
-        halps = f"Do .help {plugin_name} to get the list of commands."
+        halps = f"Do .help {plugin_name} To Get The List Of Commands."
         await event.edit(halps, buttons=buttons)
 
 
@@ -537,7 +537,7 @@ async def on_plug_in_callback_query_handler(event):
             reply_pop_up_alert = notmine
             await event.answer(reply_pop_up_alert, cache_time=0)
     except BaseException:
-        halps = f"Do .help {plugin_name} to get the list of commands."
+        halps = f"Do .help {plugin_name} To Get The List Of Commands."
         await event.edit(halps, buttons=buttons)
 
 
