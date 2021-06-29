@@ -189,7 +189,7 @@ async def _(event):
         )
         if isinstance(last_seen_status.rules, PrivacyValueAllowAll):
             afk_time = datetime.datetime.now()
-        USER_AFK = f"yes: {reason} {pic}"
+        USER_AFK = f"YES! : {reason} {pic}"
         if reason:
             try:
                 if pic.endswith((".tgs", ".webp")):
