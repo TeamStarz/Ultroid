@@ -270,7 +270,7 @@ async def _(e):
     if not e.is_private:
         return
     await e.edit(
-        "Go [here](https://console.developers.google.com/flows/enableapi?apiid=drive) And Get Your CLIENT ID And CLIENT SECRET",
+        "Go [Here](https://console.developers.google.com/flows/enableapi?apiid=drive) And Get Your CLIENT ID And CLIENT SECRET",
         buttons=[
             [
                 Button.inline("Cʟɪᴇɴᴛ Iᴅ", data="clientid"),
@@ -320,7 +320,7 @@ async def emoji(event):
     await event.delete()
     pru = event.sender_id
     var = "EMOJI_IN_HELP"
-    name = f"Emoji In `{HNDLR}help` menu"
+    name = f"Emoji In `{HNDLR}Help` Menu"
     async with event.client.conversation(pru) as conv:
         await conv.send_message("Send emoji u want to set 🙃.\n\nUse /cancel to cancel.")
         response = conv.wait_event(events.NewMessage(chats=pru))
