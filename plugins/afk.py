@@ -6,12 +6,12 @@
 # <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 """
-✘ Commands Available -
+◉ Commands Available -
 
-• `{i}afk <optional reason>`
-    AFK means away from keyboard,
-    After u active this if Someone tag or msg u then It auto Reply Him/her,
-    (Note : By Reply To any media U can set media afk too).
+• `{i}Afk <Optional Reason>`
+    AFK Means Away Arom Keyboard,
+    After You Active This If Someone Tag Or Msg You Then It Auto Reply Him/Her,
+    (Note : By Reply To Any Media You Can Set Media Afk Too).
 
 """
 
