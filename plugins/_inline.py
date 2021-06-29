@@ -19,7 +19,7 @@ from telethon.tl.types import InputBotInlineResult, InputWebDocument
 from . import *
 
 # ================================================#
-notmine = f"This bot is for {OWNER_NAME}"
+notmine = f"This Bot Is For {OWNER_NAME}"
 
 TLINK = "https://telegra.ph/file/d9c9bc13647fa1d96e764.jpg"
 helps = get_string("inline_1")
@@ -52,17 +52,17 @@ _main_help_menu = [
         Button.inline("Iɴʟɪɴᴇ•Pʟᴜɢɪɴs", data="inlone"),
     ],
     [
-        Button.url("⚙️Sᴇᴛᴛɪɴɢs⚙️", url=f"https://t.me/{asst.me.username}?start=set"),
+        Button.url("Sᴇᴛᴛɪɴɢs", url=f"https://t.me/{asst.me.username}?start=set"),
     ],
     [Button.inline("••Cʟᴏꜱᴇ••", data="close")],
 ]
 
 SUP_BUTTONS = [
     [
-        Button.url("Repo", url="https://github.com/TeamUltroid/Ultroid"),
-        Button.url("Addons", url="https://github.com/TeamUltroid/UltroidAddons"),
+        Button.url("Rezy!!", url="https://t.me/Reeeeeezy"),
+        Button.url("Channel", url="https://t.me/Rezy_IsBack"),
     ],
-    [Button.url("Support", url="t.me/UltroidSupport")],
+    [Button.url("Instagram", url="https://www.instagram.com/ridhoalfahrezi._")],
 ]
 
 # --------------------BUTTONS--------------------#
@@ -73,10 +73,10 @@ SUP_BUTTONS = [
 async def inline_alive(o):
     if len(o.text) == 0:
         b = o.builder
-        MSG = "• **Ultroid Userbot •**"
+        MSG = "• **Rezy Userbot •**"
         uptime = grt(time.time() - start_time)
         MSG += f"\n\n• **Uptime** - `{uptime}`\n"
-        MSG += f"• **OWNER** - `{OWNER_NAME}`"
+        MSG += f"• **Owner** - `{OWNER_NAME}`"
         WEB0 = InputWebDocument(
             "https://telegra.ph/file/55dd0f381c70e72557cb1.jpg", 0, "image/jpg", []
         )
@@ -96,7 +96,7 @@ async def inline_alive(o):
                 content=InputWebDocument(TLINK, 0, "image/jpg", []),
             )
         ]
-        await o.answer(RES, switch_pm=f"👥 ULTROID PORTAL", switch_pm_param="start")
+        await o.answer(RES, switch_pm=f"ULTROID PORTAL", switch_pm_param="start")
 
 
 @in_pattern("ultd")
@@ -198,7 +198,7 @@ async def _(event):
     repo = Repo.init()
     ac_br = repo.active_branch
     changelog, tl_chnglog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
-    changelog_str = changelog + f"\n\nClick the below button to update!"
+    changelog_str = changelog + f"\n\nClick The Below Button To Update!"
     if len(changelog_str) > 1024:
         await event.edit(get_string("upd_4"))
         file = open(f"ultroid_updates.txt", "w+")
@@ -230,7 +230,7 @@ async def _(event):
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds
-    pin = f"🌋Pɪɴɢ = {ms} microseconds"
+    pin = f"🌋Pɪɴɢ = {ms} Microseconds"
     await event.answer(pin, cache_time=0, alert=True)
 
 
@@ -320,7 +320,7 @@ async def addon(event):
         await event.edit(f"{halp}", buttons=buttons, link_preview=False)
     else:
         await event.answer(
-            f"• Tʏᴘᴇ `{HNDLR}setredis ADDONS True`\n Tᴏ ɢᴇᴛ ᴀᴅᴅᴏɴs ᴘʟᴜɢɪɴs",
+            f"• Tʏᴘᴇ `{HNDLR}Setredis ADDONS True`\n Tᴏ ɢᴇᴛ ᴀᴅᴅᴏɴs ᴘʟᴜɢɪɴs",
             cache_time=0,
             alert=True,
         )
@@ -455,7 +455,7 @@ async def on_plug_in_callback_query_handler(event):
         reply_pop_up_alert = f"{plugin_name} has no detailed help..."
     else:
         reply_pop_up_alert = help_string
-    reply_pop_up_alert += "\n© @TeamUltroid"
+    reply_pop_up_alert += "\n© @Rezy_IsBack"
     buttons = [
         [
             Button.inline(
@@ -497,13 +497,13 @@ async def on_plug_in_callback_query_handler(event):
     except BaseException:
         try:
             for u in CMD_HELP[plugin_name]:
-                help_string = f"Plugin Name-{plugin_name}\n\n✘ Commands Available-\n\n"
+                help_string = f"Plugin Name-{plugin_name}\n\n◉ Commands Available-\n\n"
                 help_string += str(CMD_HELP[plugin_name])
         except BaseException:
             try:
                 if plugin_name in LIST:
                     help_string = (
-                        f"Plugin Name-{plugin_name}\n\n✘ Commands Available-\n\n"
+                        f"Plugin Name-{plugin_name}\n\n◉ Commands Available-\n\n"
                     )
                     for d in LIST[plugin_name]:
                         help_string += HNDLR + d
@@ -511,10 +511,10 @@ async def on_plug_in_callback_query_handler(event):
             except BaseException:
                 pass
     if help_string == "":
-        reply_pop_up_alert = f"{plugin_name} has no detailed help..."
+        reply_pop_up_alert = f"{plugin_name} Has No Detailed Help..."
     else:
         reply_pop_up_alert = help_string
-    reply_pop_up_alert += "\n© @TeamUltroid"
+    reply_pop_up_alert += "\n© @Rezy_IsBack"
     buttons = [
         [
             Button.inline(
@@ -548,7 +548,7 @@ def page_num(page_number, loaded_plugins, prefix, type):
     if emoji:
         multi = emoji
     else:
-        multi = "✘"
+        multi = "◉"
     helpable_plugins = []
     global upage
     upage = page_number
