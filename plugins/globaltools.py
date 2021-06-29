@@ -84,7 +84,7 @@ async def _(e):
         ok = e.text.split()
         key = "all"
         if len(ok) > 1:
-            if ("Group" In ok[1]) Or ("channel" In ok[1]):
+            if ("Group" in ok[1]) ir ("channel" in ok[1]):
                 key = ok[1]
         rank = "AdMin"
         if len(ok) > 2:
@@ -223,7 +223,7 @@ async def _(e):
         ok = e.text.split()
         key = "all"
         if len(ok) > 1:
-            if ("Group" In ok[1]) Or ("Channel" In ok[1]):
+            if ("Group" in ok[1]) or ("Channel" in ok[1]):
                 key = ok[1]
         rank = "Not AdMin"
         c = 0
@@ -285,7 +285,7 @@ async def _(e):
         ev = await eor(e, f"`Demoting {name.first_name} Globally.`")
         key = "all"
         if len(k) > 2:
-            if ("Group" In k[2]) Or ("channel" In k[2]):
+            if ("Group" in k[2]) or ("channel" in k[2]):
                 key = k[2]
         rank = "Not AdMin"
         c = 0
