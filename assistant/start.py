@@ -46,7 +46,7 @@ _start = [
     ],
     [
         Button.inline("Sᴛᴀᴛs ✨", data="stat"),
-        Button.inline("Bʀᴏᴀᴅᴄᴀsᴛ 📻", data="bcast"),
+        Button.inline("Bʀᴏᴀᴅᴄᴀsᴛ ⏳", data="bcast"),
     ],
 ]
 
@@ -72,7 +72,7 @@ async def ultroid(event):
                 "`I dont work in groups`",
                 buttons=[
                     Button.url(
-                        "⚙️Sᴛᴀʀᴛ⚙️", url=f"https://t.me/{asst.me.username}?start=set"
+                        "Sᴛᴀʀᴛ", url=f"https://t.me/{asst.me.username}?start=set"
                     )
                 ],
             )
@@ -87,9 +87,9 @@ async def ultroid(event):
             u = await event.client.get_entity(event.chat_id)
             if not udB.get("STARTMSG"):
                 if udB.get("PMBOT") == "True":
-                    ok = "You can contact my master using this bot!!\n\nSend your Message, I will Deliver it To Master."
+                    ok = "You Can Contact My Master Using This Bot!!\n\nSend Your Message, I Will Deliver It To Master."
                 await event.reply(
-                    f"Hey there [{get_display_name(u)}](tg://user?id={u.id}), this is Ultroid Assistant of [{ultroid_bot.me.first_name}](tg://user?id={ultroid_bot.uid})!\n\n{ok}",
+                    f"Hey There [{get_display_name(u)}](tg://user?id={u.id}), This Is Ultroid Assistant Of [{ultroid_bot.me.first_name}](tg://user?id={ultroid_bot.uid})!\n\n{ok}",
                     buttons=[Button.inline("Info.", data="ownerinfo")],
                 )
             else:
@@ -103,7 +103,7 @@ async def ultroid(event):
             name = get_display_name(event.sender_id)
             if event.pattern_match.group(1) == "set":
                 await event.reply(
-                    "Choose from the below options -",
+                    "Choose From The Below Options -",
                     buttons=_settings,
                 )
             else:
@@ -142,7 +142,7 @@ async def bdcast(event):
     await event.edit(f"Broadcast to {len(ok)} users.")
     async with event.client.conversation(OWNER_ID) as conv:
         await conv.send_message(
-            "Enter your broadcast message.\nUse /cancel to stop the broadcast.",
+            "Enter Your Broadcast Message.\nUse /cancel To Stop The Broadcast.",
         )
         response = conv.wait_event(events.NewMessage(chats=OWNER_ID))
         response = await response
@@ -152,7 +152,7 @@ async def bdcast(event):
         else:
             success = 0
             fail = 0
-            await conv.send_message(f"Starting a broadcast to {len(ok)} users...")
+            await conv.send_message(f"Starting a Broadcast To {len(ok)} Users...")
             start = datetime.now()
             for i in ok:
                 try:
@@ -164,10 +164,10 @@ async def bdcast(event):
             time_taken = (end - start).seconds
             await conv.send_message(
                 f"""
-Broadcast completed in {time_taken} seconds.
-Total Users in Bot - {len(ok)}
-Sent to {success} users.
-Failed for {fail} user(s).""",
+Broadcast Completed In {time_taken} Seconds.
+Total Users In Bot - {len(ok)}
+Sent To {success} Users.
+Failed For {fail} User(s).""",
             )
 
 
@@ -175,6 +175,6 @@ Failed for {fail} user(s).""",
 @owner
 async def setting(event):
     await event.edit(
-        "Choose from the below options -",
+        "Choose From The Below Options -",
         buttons=_settings,
     )
