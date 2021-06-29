@@ -35,6 +35,6 @@ async def settt(event):
     languages = get_languages()
     udB.set("language", f"{lang}")
     await event.edit(
-        f"Your language has been set to {languages[lang]['natively']} [{lang}].",
+        f"Your Language Has Been Set To {languages[lang]['natively']} [{lang}].",
         buttons=get_back_button("lang"),
     )
