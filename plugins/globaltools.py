@@ -152,7 +152,7 @@ async def _(e):
         ev = await eor(e, f"`Promoting {name.first_name} Globally.`")
         key = "all"
         if len(k) > 2:
-            if ("Group" In k[2]) Or ("Channel" In k[2]):
+            if ("Group" in k[2]) or ("Channel" in k[2]):
                 key = k[2]
         rank = "AdMin"
         if len(k) > 3:
