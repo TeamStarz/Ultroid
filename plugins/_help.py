@@ -34,7 +34,7 @@ async def ult(ult):
                 await eor(ult, kk)
             else:
                 try:
-                    x = f"Plugin Name-{plug}\n\n✘ Commands Available -\n\n"
+                    x = f"Plugin Name-{plug}\n\n◉ Commands Available -\n\n"
                     for d in LIST[plug]:
                         x += HNDLR + d
                         x += "\n"
