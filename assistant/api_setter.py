@@ -57,7 +57,7 @@ async def rmbgapi(event):
     var = "DEEP_API"
     name = "DEEP AI API Key"
     async with event.client.conversation(pru) as conv:
-        await conv.send_message("Get Your Deep Api from deepai.org and send here.")
+        await conv.send_message("Get Your Deep Api From Deepai.Org And Send Here.")
         response = conv.wait_event(events.NewMessage(chats=pru))
         response = await response
         themssg = response.message.message
@@ -82,7 +82,7 @@ async def rmbgapi(event):
     var = "OCR_API"
     name = "OCR API Key"
     async with event.client.conversation(pru) as conv:
-        await conv.send_message("Get Your OCR api from ocr.space Send Send Here.")
+        await conv.send_message("Get Your OCR Api From Ocr.Space Send Send Here.")
         response = conv.wait_event(events.NewMessage(chats=pru))
         response = await response
         themssg = response.message.message
@@ -94,6 +94,6 @@ async def rmbgapi(event):
         else:
             await setit(event, var, themssg)
             await conv.send_message(
-                f"{name} changed to {themssg}",
+                f"{name} Changed To {themssg}",
                 buttons=get_back_button("apiset"),
             )
