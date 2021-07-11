@@ -67,7 +67,7 @@ Get the [Necessary Variables](#Necessary-Variables) and then click the button be
     `sh -c "$(curl -fsSL https://da.gd/termux-tel)"`
   - For Windows Users:
     `cd desktop ; wget https://del.dog/ultroid -o ultroid.py ; python ultroid.py`
-- Fill your details in a `.env` file, as given in [`.env.sample`](https://github.com/TeamUltroid/Ultroid/blob/main/.env.sample).
+- Fill your details in a `.env` file, as given in [`.env.sample`](https://github.com/TeamStarz/Ultroid/blob/main/.env.sample).
 (You can either edit and rename the file or make a new file named `.env`.)
 - Run the bot:
   - Linux Users:
